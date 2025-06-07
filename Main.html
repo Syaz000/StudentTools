@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Tools by NURAISYAH</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset & base */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #4caf50 0%, #81c784 100%);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    /* Container */
+    .container {
+      max-width: 700px;
+      padding: 40px 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      animation: fadeIn 1s ease forwards;
+    }
+
+    /* Title */
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    }
+
+    /* Subtitle */
+    p.subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+
+    /* Button */
+    a.btn {
+      background-color: #ffffffcc;
+      color: #4caf50;
+      padding: 18px 40px;
+      font-size: 1.3rem;
+      font-weight: 700;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4);
+      transition: all 0.3s ease;
+      display: inline-block;
+      user-select: none;
+      cursor: pointer;
+    }
+
+    a.btn:hover {
+      background-color: #4caf50;
+      color: white;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+      transform: scale(1.05);
+    }
+
+    /* Emoji icon */
+    .hero-emoji {
+      font-size: 5rem;
+      margin-bottom: 20px;
+      animation: bounce 2s infinite;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes bounce {
+      0%, 100% {transform: translateY(0);}
+      50% {transform: translateY(-15px);}
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      a.btn {
+        padding: 15px 30px;
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero-emoji">🎓📚</div>
+    <h1>Welcome to Student Tools</h1>
+    <p class="subtitle">Your all-in-one toolkit for study, health, and finance.</p>
+    <a href="tools.html" class="btn" aria-label="Open Tools Page">Get Started</a>
+  </div>
+</body>
+</html>
