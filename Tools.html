@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Tools - Choose Your Tool</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #e8f5e9;
+      color: #2e7d32;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 40px;
+    }
+
+    header {
+      background-color: #4caf50;
+      color: white;
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+      font-weight: 700;
+      font-size: 2rem;
+      position: sticky;
+      top: 0;
+      box-shadow: 0 3px 7px rgba(0,0,0,0.2);
+      z-index: 100;
+      user-select: none;
+    }
+
+    .container {
+      max-width: 900px;
+      width: 90%;
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .tool-card {
+      background: white;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .tool-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    }
+
+    .tool-icon {
+      font-size: 4rem;
+      margin-bottom: 15px;
+      user-select: none;
+    }
+
+    .tool-title {
+      font-weight: 700;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: #2e7d32;
+    }
+
+    .tool-desc {
+      font-size: 1rem;
+      color: #4caf50;
+      margin-bottom: 15px;
+      user-select: none;
+    }
+
+    a.button-back {
+      margin: 20px auto 0;
+      display: inline-block;
+      background-color: #4caf50;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 6px 12px rgba(76,175,80,0.7);
+      transition: background-color 0.3s ease;
+    }
+
+    a.button-back:hover {
+      background-color: #388e3c;
+    }
+
+    /* Unit converter styles */
+    #converter {
+      background: #a5d6a7;
+      border-radius: 15px;
+      padding: 20px;
+      color: #1b5e20;
+      font-weight: 600;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-top: 40px;
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+      user-select: none;
+    }
+
+    #converter input[type="number"] {
+      width: 80%;
+      padding: 10px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      text-align: center;
+      font-weight: 600;
+      outline: none;
+      box-shadow: inset 0 0 6px #81c784;
+    }
+
+    #converter button {
+      margin: 5px 8px;
+      padding: 10px 14px;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 50px;
+      border: none;
+      background-color: #4caf50;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 5px 10px rgba(67,160,71,0.7);
+      transition: background-color 0.3s ease;
+    }
+
+    #converter button:hover {
+      background-color: #388e3c;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #1b5e20;
+      min-height: 1.5em;
+      user-select: text;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      .tool-card {
+        padding: 20px;
+      }
+
+      #converter {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>🔧 Student Tools</header>
+
+<div class="container">
+  <div class="tool-card" onclick="window.location.href='calculator.html'">
+    <div class="tool-icon">🧮</div>
+    <div class="tool-title">Simple Calculator</div>
+    <div class="tool-desc">Add, subtract, multiply, and divide quickly.</div>
+  </div>
+
+  <div class="tool-card" onclick="window.location.href='bmi.html'">
+    <div class="tool-icon">⚖️</div>
+    <div class="tool-title">BMI Checker</div>
+    <div class="tool-desc">Check your Body Mass Index easily.</div>
+  </div>
+
+  <div class="tool-card" onclick="window.location.href='tax.html'">
+    <div class="tool-icon">💰</div>
+    <div class="tool-title">Income Tax Calculator</div>
+    <div class="tool-desc">Estimate your income tax liability.</div>
+  </div>
+
+  <div class="tool-card" onclick="window.location.href='converter.html'">
+    <div class="tool-icon">🔁</div>
+    <div class="tool-title">Unit Converter</div>
+    <div class="tool-desc">Convert cm, m, and km easily below.</div>
+  </div>
+</div>
+
+<!-- Back to Main -->
+<a href="main.html" class="button-back" aria-label="Back to Main Page">⬅️ Back to Main</a>
+
+<script>
+  function convert(type) {
+    const input = parseFloat(document.getElementById('inputValue').value);
+    if (isNaN(input)) {
+      document.getElementById('result').textContent = "Please enter a valid number.";
+      return;
+    }
+    let result;
+    switch(type) {
+      case 'cmToM':
+        result = input / 100;
+        document.getElementById('result').textContent = `${input} cm = ${result.toFixed(4)} m`;
+        break;
+      case 'mToCm':
+        result = input * 100;
+        document.getElementById('result').textContent = `${input} m = ${result.toFixed(2)} cm`;
+        break;
+      case 'mToKm':
+        result = input / 1000;
+        document.getElementById('result').textContent = `${input} m = ${result.toFixed(5)} km`;
+        break;
+      case 'kmToM':
+        result = input * 1000;
+        document.getElementById('result').textContent = `${input} km = ${result.toFixed(2)} m`;
+        break;
+      default:
+        document.getElementById('result').textContent = "Invalid conversion.";
+    }
+  }
+</script>
+
+</body>
+</html>
